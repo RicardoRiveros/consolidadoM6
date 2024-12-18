@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%block title%}Agregar Vechiculo{%endblock%}
+
+{%block content%}
+
+<div class="formulario">
+    <form class="p-3" method = "post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary m-2">Agregar</button>
+    </form>
+
+    <a class="btn btn-danger m-2" href="{% url 'index' %}">Cancelar</a>
+</div>
+
+{%endblock%}
